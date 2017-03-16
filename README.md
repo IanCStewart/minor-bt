@@ -38,3 +38,30 @@ In reality most of the bigger sites u visit wont have a contrast problem. They u
 *left: Chrome (css vars work) right: IE11 (css vars don't work)*
 
 ### No mouse/ No trackpad
+Having no mouse or trackpad in browsers is at first an accessibility  problem. Most of the site will still be useable via the TAB key.
+
+#### Expectations and Reality
+**Expectations**
+
+Expectations are that big site will have made their sites usable via keyboard.
+
+**Reality**
+
+Most sites are usable but focus states aren't always used so u have no clue where u are in a site.
+
+#### Web examples
+**No focus styles**
+
+![button without focus styles](./images/medium.png)
+*Text me button doesn't have focus styles*
+
+**TAB key not going thought whole UI**
+
+![no TAB thought ui](./images/palettable.png)
+*Expected tab would let me go to the settings icon thingy. Reality didn't let me get there*
+
+
+**Get stuck in search bar**
+
+![stuck in input](./images/giphy.png)
+*Expected tab would let me go thought all the gifs. Reality didn't get farther than the search input*
