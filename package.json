@@ -1,0 +1,21 @@
+{
+  "name": "minor-bt",
+  "version": "1.0.0",
+  "description": "Browser Technologies",
+  "scripts": {
+    "present": "reveal-md slides.md --port 3030 --disable-auto-open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanCStewart/minor-bt.git"
+  },
+  "keywords": [],
+  "author": "Ian Stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanCStewart/minor-bt/issues"
+  },
+  "homepage": "https://github.com/IanCStewart/minor-bt#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
