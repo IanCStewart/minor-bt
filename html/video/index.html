@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Ian Stewart">
+  <title>CSS | CSS backdrop</title>
+  <style>
+    body {
+      font-size: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-size: 2.4rem;
+      color: #0071B3;
+    }
+
+    .title {
+      display: inline;
+    }
+
+    pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+
+    code {
+      display: inline;
+      max-width: auto;
+      padding: .25em;
+      margin: 0 .5rem;
+      line-height: inherit;
+      border: 0;
+      background-color: #f6f8fa;
+    }
+
+    pre code {
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      word-wrap: normal;
+      background: transparent;
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1 class="title">HTML | HTML</h1><code>&#60;video&#62;</code><h1 class="title">tag</h1>
+    <p>This is a demo of HTML <code>&#60;video&#62;</code> tag and it's fall-back for when it's not working</p>
+    <p><code>&#60;video&#62;</code> tag in HTML snippet will look like this:</p>
+    <pre>
+      <code>
+        &#60;video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif"&#62;
+          &#60;source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm"&#62;
+          &#60;source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4"&#62;
+          &#60;source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg"&#62;
+          Your browser doesn't support HTML5 video tag.
+        &#60;/video&#62;
+      </code>
+    </pre>
+  </section>
+  <section>
+    <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
+      <source
+        src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm"
+        type="video/webm">
+      <source
+        src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"
+        type="video/mp4">
+      <source
+        src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv"
+        type="video/ogg">
+      Your browser doesn't support HTML5 video tag.
+    </video>
+  </section>
+  <section>
+    <h1>The effect page should look like 1 of the the folowing image:</h1>
+    <img src="./should-see1.png" alt="Should like like image">
+    <img src="./should-see2.jpg" alt="Should like like image">
+  </section>
+</body>
+</html>
