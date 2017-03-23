@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Ian Stewart">
+  <title>CSS | CSS var</title>
+  <style>
+    :root {
+      --color-dark-blue: #0071B3;
+      --color-code: #f6f8fa;
+      --text-body: 1.6rem;
+    }
+
+    body {
+      font-size: 1.6rem;
+      font-size: var(--text-body);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-size: calc(var(--text-body) * 1.5);
+      color: #0071B3;
+      color: var(--color-dark-blue);
+    }
+
+    pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      background-color: var(--color-code);
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+
+    pre code {
+      display: inline;
+      max-width: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0;
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>CSS | CSS variables</h1>
+    <p>This is a demo of CSS variables and it's fall-back for when it's not working</p>
+    <p>A variable in CSS snippet will look like this:</p>
+    <pre>
+      <code>
+        :root {
+          --color-dark-blue: #0071B3;
+          --text-body: 1.6rem;
+        }
+      </code>
+    </pre>
+  </section>
+  <section>
+    <h1>This whole page should look like the folowing image</h1>
+    <img src="./should-see.png" alt="Should like like image">
+  </section>
+</body>
+</html>

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Browser Technologies",
   "scripts": {
-    "present": "reveal-md slides.md --port 3030 --disable-auto-open"
+    "present": "reveal-md slides.md --port 3030 --disable-auto-open",
+    "start": "browser-sync start -s -b 'google chrome' --no-ui -f './'"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,9 @@
     "url": "https://github.com/IanCStewart/minor-bt/issues"
   },
   "homepage": "https://github.com/IanCStewart/minor-bt#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "reveal-md": "^0.1.2"
+  },
   "dependencies": {}
 }
