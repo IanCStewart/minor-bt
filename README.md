@@ -6,7 +6,7 @@ This course is about Progressive Enhancing the web.
 ## CSS | PE demo's
 ### CSS variables
 
-Check the demo for `CSS-vars` [here](./css/css-vars)
+Check the demo for `CSS-vars` [here](https://iancstewart.github.io/minor-bt/css/css-vars/)
 
 CSS variables code snippet:
 ```
