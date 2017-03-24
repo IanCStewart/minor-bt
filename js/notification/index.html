@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Ian Stewart">
+  <title>CSS | CSS backdrop</title>
+  <style>
+    body {
+      font-size: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-size: 2.4rem;
+      color: #0071B3;
+    }
+
+    pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+
+    code {
+      display: inline;
+      max-width: auto;
+      padding: .25em;
+      margin: 0 .5rem;
+      line-height: inherit;
+      border: 0;
+      background-color: #f6f8fa;
+    }
+
+    pre code {
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      word-wrap: normal;
+      background: transparent;
+    }
+
+    button {
+      font-size: inherit;
+      background: #0071B3;
+      color: #FFFFFF;
+      border-radius: 3px;
+      padding: .5em;
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>JS | JS notification</h1>
+    <p>This is a demo of JS notification</p>
+    <p>JS will call a notification with text like:</p>
+    <pre>
+      <code>
+        Hi there! I'm a browser desktop notification || Browser does not support desktop notification
+      </code>
+    </pre>
+  </section>
+  <section>
+    <button onclick="notifyMe()">Show me somethig!</button>
+  </section>
+  <section>
+    <h1>The page should look like 1 of the the folowing image:</h1>
+    <img src="./should-see1.png" alt="Should like like image">
+    <img src="./should-see2.png" alt="Should like like image">
+  </section>
+  <script>
+  function notifyMe() {
+    if (!("Notification" in window)) {
+      alert("Browser does not support desktop notification");
+    }
+
+    else if (Notification.permission === "granted") {
+      var notification = new Notification("Hi there! I'm a browser desktop notification");
+    }
+
+    else if (Notification.permission !== "denied") {
+      Notification.requestPermission(function (permission) {
+        if (permission === "granted") {
+          var notification = new Notification("Hi there!");
+        } else {
+          alert("Browser does not allow desktop notification");
+        }
+      });
+    }
+  }
+  </script>
+</body>
+</html>
