@@ -52,7 +52,7 @@ HTML `<video>` code snippet:
 </video>
 ```
 
-> *Code snippet from [video - HTML | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)*
+> *Code snippet from [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)*
 
 ### HTML input
 
