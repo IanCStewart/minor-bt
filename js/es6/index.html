@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Ian Stewart">
+  <title>CSS | CSS backdrop</title>
+  <style>
+    body {
+      font-size: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-size: 2.4rem;
+      color: #0071B3;
+    }
+
+    pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+
+    code {
+      display: inline;
+      max-width: auto;
+      padding: .25em;
+      margin: 0 .5rem;
+      line-height: inherit;
+      border: 0;
+      background-color: #f6f8fa;
+    }
+
+    pre code {
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      word-wrap: normal;
+      background: transparent;
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>JS | JS EcmaScript verion</h1>
+    <p>This is a demo of JS EcmaScript version check</p>
+    <p>JS snippet will return something like this:</p>
+    <pre>
+      <code>
+        You're browser is capable of EcmaSript `version-number`
+      </code>
+    </pre>
+  </section>
+  <section id="version">
+
+  </section>
+  <section>
+    <h1>The page should look like 1 of the the folowing image:</h1>
+    <img src="./should-see1.png" alt="Should like like image">
+    <img src="./should-see2.png" alt="Should like like image">
+  </section>
+  <script>
+  function check() {
+    "use strict";
+
+    try { eval("var foo = (x)=>x+1"); }
+    catch (e) { return false; }
+    return true;
+  }
+
+  if (check()) {
+    document.getElementById('version').innerHTML = 'Browser is capable of EcmaSript 6';
+  } else {
+    document.getElementById('version').innerHTML = 'Browser is capable of EcmaSript 5';
+  }
+  </script>
+</body>
+</html>

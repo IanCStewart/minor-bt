@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Ian Stewart">
+  <title>CSS | CSS backdrop</title>
+  <style>
+    body {
+      font-size: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-size: 2.4rem;
+      color: #0071B3;
+    }
+
+    pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+
+    pre code {
+      display: inline;
+      max-width: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      line-height: inherit;
+      word-wrap: normal;
+      border: 0;
+    }
+
+    .backdrop {
+      text-align: center;
+      background: url(https://source.unsplash.com/random), center;
+      background-size: cover;
+    }
+
+    .backdrop h1 {
+      color: #FFFFFF;
+      padding: 4em 1.6em;
+      background: hsla(202, 100%, 35%, .5);
+      backdrop-filter: blur(.05em);
+      -webkit-backdrop-filter: blur(.05em);
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>CSS | CSS backdrop-filter</h1>
+    <p>This is a demo of CSS backdrop-filter and it's fall-back for when it's not working</p>
+    <p>Backdrop-filter in CSS snippet will look like this:</p>
+    <pre>
+      <code>
+        section {
+          background: hsla(213, 16%, 22%, .85);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+        }
+      </code>
+    </pre>
+  </section>
+  <section class="backdrop">
+    <h1>This H1 has backdrop-filter</h1>
+  </section>
+  <section>
+    <h1>The effect should look like 1 of the the folowing image:</h1>
+    <img src="./should-see2.png" alt="Should like like image">
+    <img src="./should-see1.png" alt="Should like like image">
+  </section>
+</body>
+</html>
