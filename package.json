@@ -4,7 +4,8 @@
   "description": "Browser Technologies",
   "scripts": {
     "present": "reveal-md slides.md --port 3030 --disable-auto-open",
-    "start": "browser-sync start -s -b 'google chrome' --no-ui -f './'"
+    "start": "browser-sync start -s -b 'google chrome' --no-ui -f .",
+    "start-pong": "browser-sync start -s 'pong' -b 'google chrome' --no-ui -f 'pong'"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "system";
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #1e1e1e;
+  padding: 1.6rem;
+  color: #efefef;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
