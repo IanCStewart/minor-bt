@@ -44,7 +44,7 @@ function getHtml(data) {
   notification.querySelector('img').src = getPictureUri() || notification.querySelector('img').src;
   notification.querySelector('img').alt = getPictureAlt() || 'logo-team';
   notification.querySelector('h2').innerHTML = 'The Score';
-  setTimeout(() => renderNotification(notification), 5000);
+  setTimeout(() => renderNotification(notification), 10000);
   supportsNotification() ? checkNotificationPermission(notification) : null;
 }
 
@@ -98,11 +98,34 @@ function sendNotification(title, options) {
   setTimeout(
     () => (
       new Notification(title, options),
-      console.log(`%c ${title}`, 'font-size: 2.4rem'), //eslint-disable-line no-console
-      console.log(`%c ${options.body}`, 'font-size: 1.6rem') //eslint-disable-line no-console
+      console.log(`%c ${title}`, 'font-size: 2rem'), //eslint-disable-line no-console
+      console.log(`%c ${options.body}`, 'font-size: 1.4rem'), //eslint-disable-line no-console
+      playNotificationSound(),
+      changeTabTitle()
     ),
-    5000
+    10000
   );
+}
+
+function playNotificationSound() {
+  if ('Audio' in window) {
+    if ((new Audio()).canPlayType('audio/ogg; codecs=vorbis' === 'probably' | '')) {
+      const snd = new Audio('/assets/notify.ogg');
+      snd.play();
+    } else {
+      const snd = new Audio('/assets/notify.wav');
+      snd.play();
+    }
+  }
+  return false;
+}
+
+function changeTabTitle() {
+  if ('hidden' in document) {
+    document.hidden
+    ? document.title = `(1) ${document.title}`
+    : null;
+  }
 }
 
 function supportsXHR() {
