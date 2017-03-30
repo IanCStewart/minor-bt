@@ -140,3 +140,26 @@ input[type="submit"] {
 .notification a img {
   margin: 0;
 }
+
+.notify {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+}
+
+.notify .notification {
+  position: relative;
+  animation: notify 1.6s;
+  -webkit-animation: notify 1.6s;
+}
+
+@keyframes notify {
+  0% { bottom: -30rem; }
+  100% { bottom: 0; }
+}
+
+@-webkit-keyframes notify {
+  0% { bottom: -30rem; }
+  100% { bottom: 0; }
+}
