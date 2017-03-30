@@ -34,6 +34,63 @@ h1 {
   font-weight: bold;
 }
 
+body > header {
+  background: #d2d2d2;
+  margin: -1.6rem;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+body > header img {
+  float: left;
+  margin-right: 1rem;
+}
+
+body > header h1 {
+  line-height: 55px;
+}
+
+legend {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -999;
+}
+
+input[type="radio"] + img {
+  opacity: .65;
+  transition: all .3s ease-in-out;
+  filter: grayscale(.65);
+}
+
+input[type="radio"]:checked + img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+input[type="radio"]:focus + img {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: #262525;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 1.6rem;
+  margin-top: 2rem;
+  clear: both;
+}
+
 .notification {
   position: relative;
   margin: 1rem auto;
@@ -47,6 +104,7 @@ h1 {
 
 .notification h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .notification img {
