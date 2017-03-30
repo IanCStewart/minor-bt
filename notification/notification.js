@@ -22,7 +22,7 @@ function geDataFetch(url) {
 function getDataXml(url) {
   var xhr = new XMLHttpRequest();
   xhr.onerror = function(e) {
-    console.warn('Something went wrong', e);
+    console.warn('Something went wrong', e); //eslint-disable-line no-console
     return false;
   };
   xhr.onload = function() {
