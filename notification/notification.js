@@ -98,8 +98,8 @@ function sendNotification(title, options) {
   setTimeout(
     () => (
       new Notification(title, options),
-      console.log(title), //eslint-disable-line no-console
-      console.log(options.body) //eslint-disable-line no-console
+      console.log(`%c ${title}`, 'font-size: 2.4rem'), //eslint-disable-line no-console
+      console.log(`%c ${options.body}`, 'font-size: 1.6rem') //eslint-disable-line no-console
     ),
     5000
   );
