@@ -5,6 +5,15 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
+/*
+ colors:
+   background - #ececec
+   header - #d2d2d2
+   cards & footer text - #fff
+   footer & body text - #262525
+   link - #0183da
+ */
+
 html {
   font-size: 62.5%;
   font-family: "system";
@@ -13,12 +22,60 @@ html {
 
 body {
   min-height: 100%;
-  background: #1e1e1e;
+  background: #ececec;
   padding: 1.6rem;
-  color: #efefef;
+  color: #262525;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 2.6rem;
   font-weight: bold;
+}
+
+.notification {
+  position: relative;
+  margin: 1rem auto;
+  max-width: 30rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: .3rem;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.notification h1 {
+  font-size: 2rem;
+}
+
+.notification img {
+  float: left;
+  margin-right: 1rem;
+}
+
+.notification h2 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.notification p {
+  margin-top: .5rem;
+  font-size: 1.6rem;
+}
+
+.notification button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.notification button img {
+  margin: 0;
 }
