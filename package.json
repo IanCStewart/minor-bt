@@ -5,7 +5,8 @@
   "scripts": {
     "present": "reveal-md slides.md --port 3030 --disable-auto-open",
     "start": "browser-sync start -s -b 'google chrome' --no-ui -f .",
-    "start-pong": "browser-sync start -s 'pong' -b 'google chrome' --no-ui -f 'pong'"
+    "start-dev": "browser-sync start -s 'notification' -b 'google chrome' --no-ui -f 'notification'",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/IanCStewart/minor-bt#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
+    "eslint": "^3.15.0",
     "reveal-md": "^0.1.2"
   },
   "dependencies": {}
