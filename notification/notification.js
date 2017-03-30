@@ -41,14 +41,21 @@ function getHtml(data) {
   const dummy = document.createElement('div');
   dummy.innerHTML = data;
   const notification = dummy.querySelector('.notification');
-  getPictureUri() ? notification.querySelector('img').src = getPictureUri() : null;
+  notification.querySelector('img').src = getPictureUri() || notification.querySelector('img').src;
+  notification.querySelector('img').alt = getPictureAlt() || 'logo-team';
   notification.querySelector('h2').innerHTML = 'The Score';
   setTimeout(() => renderNotification(notification), 5000);
+  supportsNotification() ? checkNotificationPermission(notification) : null;
 }
 
 function getPictureUri() {
   const checked = document.querySelector('input[name="team"]:checked + img');
   return checked ? checked.src : null;
+}
+
+function getPictureAlt() {
+  const checked = document.querySelector('input[name="team"]:checked + img');
+  return checked ? checked.alt : null;
 }
 
 function renderNotification(html) {
@@ -64,6 +71,40 @@ function renderNotificationError() {
   `;
 }
 
+function checkNotificationPermission(data) {
+  let score = data.querySelector('p').innerHTML;
+  const team = data.querySelector('img').alt;
+  const title = `${team} scored!`;
+  score = score.replace(/\<em>|<\/em>/g, '');
+
+  const options = {
+    icon: `/assets/${team}.png`,
+    body: score,
+    id: 'nhl-score-notify'
+  };
+
+  if (Notification.permission === 'granted') {
+    sendNotification(title, options);
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(permission =>
+      permission === 'granted'
+      ? sendNotification(title, options)
+      : false
+    );
+  }
+}
+
+function sendNotification(title, options) {
+  setTimeout(
+    () => (
+      new Notification(title, options),
+      console.log(title), //eslint-disable-line no-console
+      console.log(options.body) //eslint-disable-line no-console
+    ),
+    5000
+  );
+}
+
 function supportsXHR() {
   if (!window.XMLHttpRequest)
     return false;
@@ -74,6 +115,13 @@ function supportsXHR() {
 function supportsFetch() {
 	if ('fetch' in window) {
 		return true;
+	}
+	return false;
+}
+
+function supportsNotification() {
+  if ('Notification' in window) {
+    return true;
 	}
 	return false;
 }
