@@ -1,0 +1,165 @@
+/* meyer reset v2 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+/*
+ colors:
+   background - #ececec
+   header - #d2d2d2
+   cards & footer text - #fff
+   footer & body text - #262525
+   link - #0183da
+ */
+
+html {
+  font-size: 62.5%;
+  font-family: "system";
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #ececec;
+  padding: 1.6rem;
+  color: #262525;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+body > header {
+  background: #d2d2d2;
+  margin: -1.6rem;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+body > header img {
+  float: left;
+  margin-right: 1rem;
+}
+
+body > header h1 {
+  line-height: 55px;
+}
+
+legend {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -999;
+}
+
+input[type="radio"] + img {
+  opacity: .65;
+  transition: all .3s ease-in-out;
+  filter: grayscale(.65);
+}
+
+input[type="radio"]:checked + img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+input[type="radio"]:focus + img {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: #262525;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 1.6rem;
+  margin-top: 2rem;
+  clear: both;
+}
+
+.notification {
+  position: relative;
+  margin: 1rem auto;
+  max-width: 30rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: .3rem;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.notification h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.notification img {
+  float: left;
+  margin-right: 1rem;
+}
+
+.notification h2 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.notification p {
+  margin-top: .5rem;
+  font-size: 1.6rem;
+}
+
+.notification a {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.notification a img {
+  margin: 0;
+}
+
+.notify {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+}
+
+.notify .notification {
+  position: relative;
+  animation: notify 1.6s;
+  -webkit-animation: notify 1.6s;
+}
+
+@keyframes notify {
+  0% { bottom: -30rem; }
+  100% { bottom: 0; }
+}
+
+@-webkit-keyframes notify {
+  0% { bottom: -30rem; }
+  100% { bottom: 0; }
+}
