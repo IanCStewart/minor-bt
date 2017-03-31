@@ -1,5 +1,3 @@
-Readme met een probleemdefinitie, hoe het probleem is opgelost en een beschrijving van de code.
-
 # Browser Technologies || Progressive Enhancing Notifications
 > use case: I would like to be notified when my team scores or wins.
 
