@@ -94,14 +94,12 @@ $ cd ~/Sites/ && git clone git@github.com:IanCStewart/minor-bt.git
 
 Get the node modules:
 ```
-$ npm i
+$ cd minor-bt/ && npm i
 ```
 
 ## Building and Deployment
 Build the `build.js` file:
-```
-$ npm run build
-```
+`$ npm run build` or `$ npm run build-minified`
 
 Run on localhost:
 ```

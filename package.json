@@ -6,7 +6,8 @@
     "present": "reveal-md slides.md --port 3030 --disable-auto-open",
     "start": "browser-sync start -s -b 'google chrome' --no-ui -f .",
     "start-dev": "browser-sync start -s 'notification' -b 'google chrome' --no-ui -f 'notification'",
-    "build": "babel notification/notification.js --presets=es2015 | esmangle > notification/build.js",
+    "build": "babel notification/notification.js --presets=es2015 | notification/build.js",
+    "build-minified": "babel notification/notification.js --presets=es2015 | esmangle > notification/build.js",
     "lint": "eslint ./"
   },
   "repository": {
