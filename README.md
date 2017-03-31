@@ -9,3 +9,6 @@ View my TODO list off Progressive Enhancements for my Funda Web-App [here](./fun
 
 ### PE-Demo's
 View my demo's off Progressive Enhancements [here](https://iancstewart.github.io/minor-bt/week2/).
+
+### Final Demo
+View my final demo off Progressive Enhancements [here](https://iancstewart.github.io/minor-bt/notification/).

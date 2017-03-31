@@ -1,5 +1,6 @@
 # Browser Technologies || Progressive Enhancing Notifications
 > use case: I would like to be notified when my team scores or wins.
+> View the Demo: [demo on github pages](http://iancstewart.github.io/minor-bt/notification/demo.html)
 
 ## The problem
 A user wishes to be notified of update during a game. The user would like to see this in a web browser. User can browse with multiple browsers, whereas every browser has a different support of features needed for this task. It can also occur that the user defers to another browser tab or window, this will result in the need of a 'blind' notification.
