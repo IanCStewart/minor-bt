@@ -60,6 +60,8 @@ function getPictureAlt() {
 
 function renderNotification(html) {
   document.querySelector('.notify').innerHTML = html.outerHTML;
+  playNotificationSound();
+  changeTabTitle();
 }
 
 function renderNotificationError() {
@@ -99,9 +101,7 @@ function sendNotification(title, options) {
     () => (
       new Notification(title, options),
       console.log(`%c ${title}`, 'font-size: 2rem'), //eslint-disable-line no-console
-      console.log(`%c ${options.body}`, 'font-size: 1.4rem'), //eslint-disable-line no-console
-      playNotificationSound(),
-      changeTabTitle()
+      console.log(`%c ${options.body}`, 'font-size: 1.4rem') //eslint-disable-line no-console
     ),
     10000
   );
