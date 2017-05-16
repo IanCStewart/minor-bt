@@ -84,12 +84,22 @@ The following would be a problem for screen readers:
 - Outline with only `h1` elements. This won't really enlighten a screen reader if all is `h1`.
 > Headings facilitate page navigation for users of assistive technologies. They also provide semantic and visual meaning and structure to the document. First level headings should contain the most important heading(s) on the page (generally the document title). ~ wave plugin
 
+If you use voice over for mac u'll see some other issues:
+*chrome*
+- Only two input fields to be read.
+- No clue off the other content on the site. This makes it hard to gather the context.
+
+*safari*
+- Able to go through content at first enter. After entering the input field you get stuck there.
+
 ## TL;DR
 ### TODO
 **must**
 - [ ] Add fall-back for images to prevent.
 - [ ] Add fall-back when there's no JS.
 - [ ] Fall-back for css vars.
+- [ ] `alt` tags for images so screen readers can read it.
+- [ ] Content structure for screen readers.
 
 **could**
 - [ ] Add self chosen fall-back font instead of browsers own fall-back.
