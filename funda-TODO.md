@@ -62,6 +62,28 @@ Issues:
 
 Most off these problems their fixes are already listed above. Most off them are PE issues without a fallback for older devices and browsers.
 
+## Screen Reader
+> Using [wave](http://wave.webaim.org/) to test accessibility for screen readers.
+
+![outlaws](./images/screen-reader-outlaws.png)
+> visual problem points the test picks up
+
+![error list](./images/screen-reader-errors.png)
+> possible problems for screen readers
+
+![outline](./images/screen-reader-outlines.png)
+> outline a screen reader would create
+
+The following would be a problem for screen readers:
+- Missing `alt` on images.
+> Each image must have an alt attribute. Without alternative text, the content of an image will not be available to screen reader users or when the image is unavailable. ~ wave plugin
+
+- Missing `label` on input field.
+> If a form control does not have a properly associated text label, the function or purpose of that form control may not be presented to screen reader users. Form labels also provide visible descriptions and larger clickable targets for form controls. ~ wave plugin
+
+- Outline with only `h1` elements. This won't really enlighten a screen reader if all is `h1`.
+> Headings facilitate page navigation for users of assistive technologies. They also provide semantic and visual meaning and structure to the document. First level headings should contain the most important heading(s) on the page (generally the document title). ~ wave plugin
+
 ## TL;DR
 ### TODO
 **must**
