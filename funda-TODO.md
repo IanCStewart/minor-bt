@@ -64,23 +64,19 @@ Most off these problems their fixes are already listed above. Most off them are 
 
 ## Screen Reader
 > Using [wave](http://wave.webaim.org/) to test accessibility for screen readers.
-
-$~$
+&nbsp;
 
 ![outlaws](./images/screen-reader-outlaws.png)
 > visual problem points the test picks up
-
-$~$
+&nbsp;
 
 ![error list](./images/screen-reader-errors.png)
 > possible problems for screen readers
-
-$~$
+&nbsp;
 
 ![outline](./images/screen-reader-outlines.png)
 > outline a screen reader would create
-
-$~$
+&nbsp;
 
 The following would be a problem for screen readers:
 - Missing `alt` on images.
@@ -91,11 +87,9 @@ The following would be a problem for screen readers:
 
 - Outline with only `h1` elements. This won't really enlighten a screen reader if all is `h1`.
 > Headings facilitate page navigation for users of assistive technologies. They also provide semantic and visual meaning and structure to the document. First level headings should contain the most important heading(s) on the page (generally the document title). ~ wave plugin
-
-$~$
+&nbsp;
 
 If you use voice over for mac u'll see some other issues:
-
 *chrome*
 - Only two input fields to be read.
 - No clue off the other content on the site. This makes it hard to gather the context.
